@@ -5,6 +5,7 @@
   --light-purple: #9747ff;
   --trans-purple: rgba(72, 0, 224, 0.62);
   --trans-red: rgba(224, 0, 0, 0.62);
+  --trans-green: rgba(72, 224, 0, 0.62);
   --light-red: #e00000;
   --slate: #8892b0;
   --white: #e6f1ff;
@@ -203,4 +204,31 @@ input[type="file"]::file-selector-button {
 
 .del-btn:hover {
   background-color: var(--light-red);
+}
+
+.main-buttons{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.main-buttons button{
+    width: 100%;
+}
+
+.gen-btn{
+    border: 1px solid var(--white);
+    background-color: var(--trans-green);
+}
+
+.load-btn{
+    border: 1px solid var(--light-purple);
+    background-color: var(--trans-purple);
+}
+
+.reset-btn{
+    background-color: var(--trans-red);
+    border: 1px solid var(--white)
 }

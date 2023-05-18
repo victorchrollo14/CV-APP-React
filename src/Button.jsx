@@ -1,4 +1,4 @@
-function Button({ children, cname, onClick }) {
+export function Button({ children, cname, onClick }) {
   return (
     <button className={`${cname} btn`} onClick={onClick}>
       {children}
