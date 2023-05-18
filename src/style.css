@@ -1,207 +1,206 @@
-:root{
-    /* colors */
-    --dark-purple: #4800E0;
-    --lightest-purple: #8B54FF;
-    --light-purple: #9747FF;
-    --trans-purple: rgba(72, 0 , 224, 0.62);
-    --trans-red:rgba(224, 0, 0, 0.62);
-    --light-red: #E00000;
-    --slate: #8892B0;
-    --white: #e6f1ff;
-    --lightest-slate: #ccd6f6;
-    --light-slate: #a8b2d1;
-    --dark-blue: #0F0F17;
-    --font-montserrat: "Montserrat", sans-serif;
-    --font-mont-semi: "Montserrat-semibold", sans-serif; 
-    --font-playfair: "playfair_displayregular";
-    --font-play-semi: "playfair_displaysemibold";
-    --fz-mob-heading: 32px;
-    --fz-sub-heading: 15px;
-    --fz-para: 13px;
-    --border-radius: 25px;
-    --tr-ease: all 1s ease;
-    --tr-linear: all .5s linear;
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
-    --fz-heading: 32px;
-    --fz-heading-max: 80px;
-    --fw-regular: 400;
-    --fw-semi-bold: 600;
-    --w1: 1000px;
-    --w2: 400px;
-    --N: 2;
-    --M: 1;
- 
+:root {
+  /* colors */
+  --dark-purple: #4800e0;
+  --lightest-purple: #8b54ff;
+  --light-purple: #9747ff;
+  --trans-purple: rgba(72, 0, 224, 0.62);
+  --trans-red: rgba(224, 0, 0, 0.62);
+  --light-red: #e00000;
+  --slate: #8892b0;
+  --white: #e6f1ff;
+  --lightest-slate: #ccd6f6;
+  --light-slate: #a8b2d1;
+  --dark-blue: #0f0f17;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-mont-semi: "Montserrat-semibold", sans-serif;
+  --font-playfair: "playfair_displayregular";
+  --font-play-semi: "playfair_displaysemibold";
+  --fz-mob-heading: 32px;
+  --fz-sub-heading: 15px;
+  --fz-para: 13px;
+  --border-radius: 25px;
+  --tr-ease: all 1s ease;
+  --tr-linear: all 0.5s linear;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+  --fz-heading-max: 80px;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --w1: 1000px;
+  --w2: 400px;
+  --N: 2;
+  --M: 1;
 }
 
 @font-face {
-    font-family: "Monseratt";
-    src: url("./Assets/fonts/montserrat-regular-webfont.woff2") format('woff2'),
-    url("./Assets/fonts/montserrat-regular-webfont.woff"), format('woff');
-    font-weight: 400;
+  font-family: "Monseratt";
+  src: url("./Assets/fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("./Assets/fonts/montserrat-regular-webfont.woff"), format("woff");
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Montserrat-semibold";
-    src: url("./Assets/fonts/montserrat-semibold-webfont.woff2") format('woff2'),
-    url("./Assets/fonts/montserrat-semibold-webfont.woff") format('woff');
-    font-weight: 800;
+  font-family: "Montserrat-semibold";
+  src: url("./Assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("./Assets/fonts/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: 800;
 }
 
 @font-face {
-    font-family: 'playfair_displayregular';
-    src: url('./Assets/fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
-         url('./Assets/fonts/playfairdisplay-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "playfair_displayregular";
+  src: url("./Assets/fonts/playfairdisplay-regular-webfont.woff2")
+      format("woff2"),
+    url("./Assets/fonts/playfairdisplay-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'playfair_displaysemibold';
-    src: url('./Assets/fonts/playfairdisplay-semibold-webfont.woff2') format('woff2'),
-         url('./Assets/fonts/playfairdisplay-semibold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "playfair_displaysemibold";
+  src: url("./Assets/fonts/playfairdisplay-semibold-webfont.woff2")
+      format("woff2"),
+    url("./Assets/fonts/playfairdisplay-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-body{
-    /* height: 100vh; set body height to viewport height */
-    margin: 0;
-    padding: 0;
-    background-color: var(--dark-blue);
-
+body {
+  /* height: 100vh; set body height to viewport height */
+  margin: 0;
+  padding: 0;
+  background-color: var(--dark-blue);
 }
 
 #root {
-    height: 100%;
-    width: 100%;
-
-
+  height: 100%;
+  width: 100%;
 }
 
 /*  Header */
-.header{
-    padding: 10px;
-    text-align: center;
-    background-color: var(--dark-purple);
+.header {
+  padding: 10px;
+  text-align: center;
+  background-color: var(--dark-purple);
 }
 
-.header h1{
-    margin: 0;
-    font-family: var(--font-playfair);
+.header h1 {
+  margin: 0;
+  font-family: var(--font-playfair);
 }
 
-.main-body{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+.main-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.heading{
-    font-family: var(--font-playfair);
+.heading {
+  font-family: var(--font-playfair);
 }
 
-.form{
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    background-color: var(--dark-blue);
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  background-color: var(--dark-blue);
 }
 
-.form-sections{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-   
+.form-sections,
+.form-sections li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.input-button, .input-des{
-    border: 1px solid var(--dark-purple);
-    padding: 15px;
-    border-radius: var(--border-radius);
-    outline: none;
-    outline-color: var(--lightest-purple);
-    color:var(--white);
-    font-family: var(--font-montserrat);
-    background-color: var(--dark-blue);
-
+.input-button,
+.input-des {
+  border: 1px solid var(--dark-purple);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  outline: none;
+  outline-color: var(--lightest-purple);
+  color: var(--white);
+  font-family: var(--font-montserrat);
+  background-color: var(--dark-blue);
 }
 
-.input-des{
-    height: 100px;
+.input-des {
+  height: 100px;
 }
 
-.upload-section{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+.upload-section {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
-input[type=text]::placeholder{
-    color:var(--white);
+input[type="text"]::placeholder {
+  color: var(--white);
 }
 
-input[type=file]{
-    box-sizing: border-box;
-    width:100%;
-    appearance: none;
-    margin: 10px;
-    border: 1px solid var(--dark-purple);
-    padding: 10px;
-    color:var(--white);
-    border-radius: var(--border-radius);
-
+input[type="file"] {
+  box-sizing: border-box;
+  width: 100%;
+  appearance: none;
+  margin: 10px;
+  border: 1px solid var(--dark-purple);
+  padding: 10px;
+  color: var(--white);
+  border-radius: var(--border-radius);
 }
 
-input[type=file]::file-selector-button{
-    background-color: var(--dark-purple);
-    border: 0;
-    padding:  10px 20px;
-    border-radius: var(--border-radius);
+input[type="file"]::file-selector-button {
+  background-color: var(--dark-purple);
+  border: 0;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
 }
 
-.input[type=file]::file-selector-button:hover{
-    background-color: var(--light-purple);
+.input[type="file"]::file-selector-button:hover {
+  background-color: var(--light-purple);
+}
+
+.list {
+  padding: 0;
+  margin: 0;
 }
 
 /* Education Section */
-.same-row{
-    display: flex;
-    justify-content: left;
-    gap: 30px;
+.same-row,
+.same-row1 {
+  display: flex;
+  justify-content: left;
+  gap: 30px;
 }
 
-.btn{
-    width:150px;
-    padding: 12px 20px;
-    border-radius: var(--border-radius);
-    transition: backgroun-color .25s ease-in;
+.btn {
+  width: 150px;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  transition: backgroun-color 0.25s ease-in;
 }
 
-.add-btn{
-    background-color: var(--trans-purple);
-    border: 1px solid var(--light-purple);
+.add-btn {
+  background-color: var(--trans-purple);
+  border: 1px solid var(--light-purple);
 }
 
-.add-btn:hover{
-    background-color: var(--dark-purple);
+.add-btn:hover {
+  background-color: var(--dark-purple);
 }
 
-.del-btn{
-    background-color: var(--trans-red);
-    border: 1px solid var(--white);
+.del-btn {
+  background-color: var(--trans-red);
+  border: 1px solid var(--white);
 }
 
-.del-btn:hover{
-    background-color: var(--light-red);
+.del-btn:hover {
+  background-color: var(--light-red);
 }
