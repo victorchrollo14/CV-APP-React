@@ -3,6 +3,9 @@
     --dark-purple: #4800E0;
     --lightest-purple: #8B54FF;
     --light-purple: #9747FF;
+    --trans-purple: rgba(72, 0 , 224, 0.62);
+    --trans-red:rgba(224, 0, 0, 0.62);
+    --light-red: #E00000;
     --slate: #8892B0;
     --white: #e6f1ff;
     --lightest-slate: #ccd6f6;
@@ -176,4 +179,29 @@ input[type=file]::file-selector-button{
     display: flex;
     justify-content: left;
     gap: 30px;
+}
+
+.btn{
+    width:150px;
+    padding: 12px 20px;
+    border-radius: var(--border-radius);
+    transition: backgroun-color .25s ease-in;
+}
+
+.add-btn{
+    background-color: var(--trans-purple);
+    border: 1px solid var(--light-purple);
+}
+
+.add-btn:hover{
+    background-color: var(--dark-purple);
+}
+
+.del-btn{
+    background-color: var(--trans-red);
+    border: 1px solid var(--white);
+}
+
+.del-btn:hover{
+    background-color: var(--light-red);
 }
