@@ -173,6 +173,10 @@ input[type="file"]::file-selector-button {
   margin: 0;
 }
 
+.list li{
+  margin: 10px 0;
+}
+
 /* Education Section */
 .same-row,
 .same-row1 {
@@ -207,7 +211,7 @@ input[type="file"]::file-selector-button {
 }
 
 .main-buttons{
-    margin: 10px 0;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -220,7 +224,7 @@ input[type="file"]::file-selector-button {
 
 .gen-btn{
     border: 1px solid var(--white);
-    background-color: var(--trans-green);
+    background-color: var(--trans-purple);
 }
 
 .load-btn{

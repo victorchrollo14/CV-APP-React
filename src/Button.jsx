@@ -6,24 +6,11 @@ export function Button({ children, cname, onClick }) {
   );
 }
 
-export function AddButton() {
-  function addItem() {
-    console.log("add");
-  }
+export function AddButton({onClick}) {
 
-  return (
-    <Button cname={"add-btn"} onClick={addItem}>
-      Add
-    </Button>
-  );
+  return <Button cname={"add-btn"} onClick={onClick}>Add</Button>;
 }
 
-export function DeleteButton() {
-  function deleteItem() {}
-
-  return (
-    <Button cname={"del-btn"} onClick={deleteItem}>
-      Delete
-    </Button>
-  );
+export function DeleteButton({onClick}) {
+  return <Button cname={"del-btn"} onClick={onClick}>Delete</Button>;
 }

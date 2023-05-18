@@ -7,7 +7,6 @@ export function ExpSection() {
     <section className="exp-section form-sections">
       <Heading>Experience</Heading>
       <ExpList />
-      <AddButton />
     </section>
   );
 }
@@ -23,7 +22,10 @@ function ExpList() {
         </div>
         <Input>City </Input>
         <Input>Role</Input>
-        <DeleteButton />
+        <div className="same-row1">
+          <DeleteButton />
+          <AddButton />
+        </div>
       </li>
     </ul>
   );
