@@ -1,3 +1,4 @@
+import { EduSection } from "./EducationSection";
 import { Heading } from "./Heading";
 import { ImageUpload } from "./ImageUpload";
 import { Input } from "./Input";
@@ -9,8 +10,7 @@ export function Form() {
         <form action="" className="form">
           <section className="Info-section form-sections">
             <Heading>Personal Information</Heading>
-            <Input>First Name</Input>
-            <Input>Last Name</Input>
+            <Input>Full Name</Input>
             <Input>Profession</Input>
             <Input>Phone Number</Input>
             <Input>Email</Input>
@@ -27,6 +27,7 @@ export function Form() {
               <ImageUpload>Upload Banner</ImageUpload>  
             </div>
           </section>
+          <EduSection />
         </form>
       </div>
     </>

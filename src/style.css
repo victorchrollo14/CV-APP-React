@@ -170,3 +170,10 @@ input[type=file]::file-selector-button{
 .input[type=file]::file-selector-button:hover{
     background-color: var(--light-purple);
 }
+
+/* Education Section */
+.same-row{
+    display: flex;
+    justify-content: left;
+    gap: 30px;
+}
