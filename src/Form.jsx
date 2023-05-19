@@ -4,6 +4,7 @@ import { Heading } from "./Heading";
 import { ImageUpload } from "./ImageUpload";
 import { Input } from "./Input";
 import { MainButtons } from "./MainButtons";
+import { SkillsSection } from "./SkillsSection";
 
 export function Form() {
   function handleSubmit(e) {
@@ -35,6 +36,7 @@ export function Form() {
           </section>
           <EduSection />
           <ExpSection />
+          <SkillsSection />
           <MainButtons />
         </form>
       </div>
