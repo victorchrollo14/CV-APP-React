@@ -4,7 +4,7 @@ export function MainButtons() {
   return (
     <>
       <div className="main-buttons">
-        <Button cname={"gen-btn"}>Generate Pdf</Button>
+        <button type="submit" className="gen-btn btn">Generate Pdf </button>
         {/* <Button cname={"load-btn"} >Load Example</Button> */}
         <Button cname={"reset-btn"}>Reset</Button>
       </div>
