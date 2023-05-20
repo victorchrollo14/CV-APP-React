@@ -4,24 +4,19 @@ import { Input } from "./Input";
 import React, { useState } from "react";
 
 export function SkillsSection() {
-  const [input, setInput] = useState([]);
+  const [skillinput, setskillInput] = useState([]);
   const [newInput, setNewInput] = useState("");
 
   const addInput = () => {
     if (newInput.trim() !== "") {
-      setInput([...input, newInput]);
+      setskillInput([...skillinput, newInput]);
       setNewInput("");
     }
   };
   const deleteInput = (index) => {
-    const updatedInput = input.filter((_, i) => i !== index);
-    setInput(updatedInput);
+    const updatedInput = skillinput.filter((_, i) => i !== index);
+    setskillInput(updatedInput);
   };
-  /* const handleSkillChange = (index, value) => {
-    const updatedInput = [...input];
-    updatedInput[index] = value;
-    setInput(updatedInput);
-  }; */
   return (
     <section className="form-sections edu-section">
       <Heading>Skills</Heading>
@@ -35,14 +30,14 @@ export function SkillsSection() {
           placeholder="Enter a new skill"
         />
         <button className={"btn add-btn"} onClick={addInput}>Add</button>
-        <ul>
-          {input.map((input, index) => (
-            <li style={{color:'white'}} key={index}>
-              {input}
+        
+          {skillinput.map((element, index) => (
+            <div key={index}>
+            <input type="text" value={element} className="input-button" style={{color:'white'}}/>
               <button className={"btn del-btn"} onClick={() => deleteInput(index)}>Delete</button>
-            </li>
+            
+            </div>
           ))}
-        </ul>
       </div>
     </section>
   );
