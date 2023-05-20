@@ -1,7 +1,7 @@
 export function Heading({children}) {
     return (
         <>
-        <h2 className="form-heading">{children}</h2>
+        <h2 className="form-heading heading">{children}</h2>
         </>
     )
 }

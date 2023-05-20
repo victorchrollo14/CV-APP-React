@@ -93,6 +93,8 @@ body {
 .header h1 {
   margin: 0;
   font-family: var(--font-playfair);
+  font-size:clamp(var(--fz-heading), 2.5rem, 40px);
+  
 }
 
 .main-body {
@@ -104,12 +106,13 @@ body {
 
 .heading {
   font-family: var(--font-playfair);
+  font-size: clamp(var(--fz-md), 1.5rem, var(--fz-heading-max));
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: clamp(300px, 50vw, 600px);
   background-color: var(--dark-blue);
 }
 
@@ -181,6 +184,7 @@ input[type="file"]::file-selector-button {
 .same-row,
 .same-row1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
   gap: 30px;
 }
