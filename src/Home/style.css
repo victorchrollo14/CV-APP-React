@@ -48,14 +48,14 @@
 
 @font-face {
   font-family: "Montserrat-semibold";
-  src: url("./Assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
-    url("./Assets/fonts/montserrat-semibold-webfont.woff") format("woff");
+  src: url("../Assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("../Assets/fonts/montserrat-semibold-webfont.woff") format("woff");
   font-weight: 800;
 }
 
 @font-face {
   font-family: "playfair_displayregular";
-  src: url("./Assets/fonts/playfairdisplay-regular-webfont.woff2")
+  src: url("../Assets/fonts/playfairdisplay-regular-webfont.woff2")
       format("woff2"),
     url("./Assets/fonts/playfairdisplay-regular-webfont.woff") format("woff");
   font-weight: normal;
@@ -64,9 +64,9 @@
 
 @font-face {
   font-family: "playfair_displaysemibold";
-  src: url("./Assets/fonts/playfairdisplay-semibold-webfont.woff2")
+  src: url("../Assets/fonts/playfairdisplay-semibold-webfont.woff2")
       format("woff2"),
-    url("./Assets/fonts/playfairdisplay-semibold-webfont.woff") format("woff");
+    url("../Assets/fonts/playfairdisplay-semibold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -78,6 +78,8 @@ body {
   background-color: var(--dark-blue);
 }
 
+* { margin:0; padding:0; }
+
 #root {
   height: 100%;
   width: 100%;
@@ -85,16 +87,60 @@ body {
 
 /*  Header */
 .header {
+  position: fixed;
+  top:0;
+  width: 100vw;
   padding: 10px;
-  text-align: center;
   background-color: var(--dark-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
+@media  (max-width: 768px) {
+    .header{
+        justify-content: space-between;
+    }
+}
+
+
 .header h1 {
-  margin: 0;
+  margin: 0 ;
   font-family: var(--font-playfair);
-  font-size:clamp(var(--fz-heading), 2.5rem, 40px);
+  font-size:40px;
+  color:var(--white)
   
+}
+
+@media (max-width: 600px) {
+  .header h1{
+      font-size: 25px;
+  }
+
+  .preview-btn{
+    padding: 5px 5px;
+    right: 10px;
+  }
+}
+
+
+.preview-btn{
+   position: fixed;
+   background-color: var(--trans-red);
+   border: 1px solid var(--white);
+   padding: 8px 25px;
+   border-radius: var(--border-radius);
+   right: 50px;
+   font-size: var(--fz-sm);
+   color: var(--white);
+   text-decoration: none;
+   font-family: var(--font-montserrat);
+}
+
+.preview-btn:hover{
+  background-color: var(--light-red);
+  color:var(--white)
 }
 
 .main-body {
@@ -114,6 +160,7 @@ body {
   flex-direction: column;
   width: clamp(300px, 50vw, 600px);
   background-color: var(--dark-blue);
+  margin: 100px 0 0 0;
 }
 
 .form-sections,
