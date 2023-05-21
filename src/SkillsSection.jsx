@@ -24,20 +24,31 @@ export function SkillsSection() {
       <div>
         <input
           type="text"
-          className="input-button"
+          className="input-button margin"
           value={newInput}
           onChange={(e) => setNewInput(e.target.value)}
           placeholder="Enter a new skill"
         />
-        <button className={"btn add-btn"} onClick={addInput}>Add</button>
-        
-          {skillinput.map((element, index) => (
-            <div key={index}>
-            <input type="text" value={element} className="input-button" style={{color:'white'}}/>
-              <button className={"btn del-btn"} onClick={() => deleteInput(index)}>Delete</button>
-            
-            </div>
-          ))}
+        <button className={"btn add-btn"} onClick={addInput}>
+          Add
+        </button>
+
+        {skillinput.map((element, index) => (
+          <div key={index}>
+            <input
+              type="text"
+              value={element}
+              className="input-button margin"
+              style={{ color: "white" }}
+            />
+            <button
+              className={"btn del-btn"}
+              onClick={() => deleteInput(index)}
+            >
+              Delete
+            </button>
+          </div>
+        ))}
       </div>
     </section>
   );

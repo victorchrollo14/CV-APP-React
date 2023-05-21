@@ -241,3 +241,7 @@ input[type="file"]::file-selector-button {
     background-color: var(--trans-red);
     border: 1px solid var(--white)
 }
+
+.margin{
+  margin: 0 10px 10px 0;
+}
