@@ -1,0 +1,82 @@
+:root {
+    /* colors */
+    --dark-purple: #4800e0;
+    --lightest-purple: #8b54ff;
+    --light-purple: #9747ff;
+    --trans-purple: rgba(72, 0, 224, 0.62);
+    --trans-red: rgba(224, 0, 0, 0.62);
+    --trans-green: rgba(72, 224, 0, 0.62);
+    --light-red: #e00000;
+    --slate: #8892b0;
+    --white: #e6f1ff;
+    --lightest-slate: #ccd6f6;
+    --light-slate: #a8b2d1;
+    --dark-blue: #0f0f17;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-mont-semi: "Montserrat-semibold", sans-serif;
+    --font-playfair: "playfair_displayregular";
+    --font-play-semi: "playfair_displaysemibold";
+    --fz-mob-heading: 32px;
+    --fz-sub-heading: 15px;
+    --fz-para: 13px;
+    --border-radius: 25px;
+    --tr-ease: all 1s ease;
+    --tr-linear: all 0.5s linear;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --fz-heading-max: 80px;
+    --fw-regular: 400;
+    --fw-semi-bold: 600;
+    --w1: 1000px;
+    --w2: 400px;
+    --N: 2;
+    --M: 1;
+  }
+  
+  @font-face {
+    font-family: "Monseratt";
+    src: url("./Assets/fonts/montserrat-regular-webfont.woff2") format("woff2"),
+      url("./Assets/fonts/montserrat-regular-webfont.woff"), format("woff");
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "Montserrat-semibold";
+    src: url("../Assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+      url("../Assets/fonts/montserrat-semibold-webfont.woff") format("woff");
+    font-weight: 800;
+  }
+  
+  @font-face {
+    font-family: "playfair_displayregular";
+    src: url("../Assets/fonts/playfairdisplay-regular-webfont.woff2")
+        format("woff2"),
+      url("./Assets/fonts/playfairdisplay-regular-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "playfair_displaysemibold";
+    src: url("../Assets/fonts/playfairdisplay-semibold-webfont.woff2")
+        format("woff2"),
+      url("../Assets/fonts/playfairdisplay-semibold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body{
+    color:var(--white);
+  }
+
+
+  .template{
+        height: 100vh;
+        width: 100vw;
+  }

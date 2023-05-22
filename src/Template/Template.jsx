@@ -1,9 +1,11 @@
 function Template() {
-    return (
-        <>
-        <h1>Wel come to template</h1>
-        </>
-    )
+  return (
+    <>
+      <div className="template">
+        <h1>Welcome to template</h1>
+      </div>
+    </>
+  );
 }
 
-export default Template
+export default Template;

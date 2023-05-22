@@ -76,13 +76,14 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--dark-blue);
+  color: var(--white);
 }
 
 * { margin:0; padding:0; }
 
 #root {
-  height: 100%;
-  width: 100%;
+   height: auto;
+   width: 100vw;
 }
 
 /*  Header */
@@ -208,6 +209,7 @@ input[type="file"] {
 }
 
 input[type="file"]::file-selector-button {
+  color: var(--white);
   background-color: var(--dark-purple);
   border: 0;
   padding: 10px 20px;
@@ -237,6 +239,7 @@ input[type="file"]::file-selector-button {
 }
 
 .btn {
+  color: var(--white);
   width: 150px;
   padding: 12px 20px;
   border-radius: var(--border-radius);
@@ -271,6 +274,7 @@ input[type="file"]::file-selector-button {
 }
 
 .main-buttons button{
+    color: var(--white);
     width: 100%;
 }
 
