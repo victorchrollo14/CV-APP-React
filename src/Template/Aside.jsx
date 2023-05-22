@@ -1,6 +1,7 @@
 import profilePic from "../Assets/usopp.jpg";
 
 import { PersonalInfo } from "./PersonalInfo";
+import { SkillsInfo } from "./SkillsInfo";
 
 export function Aside() {
   return (
@@ -12,6 +13,7 @@ export function Aside() {
           </div>
         </div>
         <PersonalInfo />
+        <SkillsInfo />
       </section>
     </>
   );

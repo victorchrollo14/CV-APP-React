@@ -179,12 +179,13 @@
   border: 1px solid var(--white);
 }
 
-.personal-info{
+.info-sections{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 0 20px;
+  margin: 0 0 30px 0;
 }
 
 .heading{
@@ -211,4 +212,13 @@
   font-size: var(--fz-xs);
   font-family: var(--font-montserrat);
   margin: 0 0 10px 0;
+}
+
+.list{
+  list-style: none;
+}
+
+.list li{
+  margin: 0 0 0 10px;
+  color: var(--white);
 }
