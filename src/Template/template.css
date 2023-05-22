@@ -7,6 +7,7 @@
   --trans-purple: rgba(72, 0, 224, 0.62);
   --trans-red: rgba(224, 0, 0, 0.62);
   --trans-green: rgba(72, 224, 0, 0.62);
+  --light-brown: #989060;
   --light-red: #e00000;
   --slate: #8892b0;
   --grey: #BAB8B8;
@@ -149,7 +150,9 @@
 .aside {
   width: 30%;
   height: 100%;
-  background-color: var(--grey);
+  background-color: var(--light-brown);
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-part{
@@ -163,7 +166,7 @@
     width: 165px;
     height: 165px;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,5 +176,39 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  border: 1px solid var(--black);
+  border: 1px solid var(--white);
+}
+
+.personal-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.heading{
+  font-family: var(--font-montserrat);
+  font-size: var(--fz-xxl);
+}
+
+.heading-underlined{
+  color: var(--white);
+  padding: 0 15px 5px 0;
+  border-bottom: 2px solid var(--white);
+  margin: 0 0 20px 0;
+
+}
+
+.sub-heading{
+  color: var(--white);
+  font-family: var(--font-montserrat);
+  font-size: var(--fz-sub-heading);
+}
+
+.info-values{
+  color: var(--lightest-slate);
+  font-size: var(--fz-xs);
+  font-family: var(--font-montserrat);
+  margin: 0 0 10px 0;
 }

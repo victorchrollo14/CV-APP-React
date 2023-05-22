@@ -1,5 +1,7 @@
 import profilePic from "../Assets/usopp.jpg";
 
+import { PersonalInfo } from "./PersonalInfo";
+
 export function Aside() {
   return (
     <>
@@ -9,6 +11,7 @@ export function Aside() {
             <img src={profilePic} alt="profile Image" className="profile-pic" />
           </div>
         </div>
+        <PersonalInfo />
       </section>
     </>
   );
