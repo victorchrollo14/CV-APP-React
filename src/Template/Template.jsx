@@ -1,8 +1,16 @@
+import { Link } from "react-router-dom";
+import "./template.css";
+import { Header } from "./Header";
+import { Resume } from "./Resume";
+
 function Template() {
   return (
     <>
       <div className="template">
-        <h1>Welcome to template</h1>
+        <Header />
+        <div className="resume-wrapper">
+          <Resume />
+        </div>
       </div>
     </>
   );
