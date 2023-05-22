@@ -1,144 +1,177 @@
 :root {
-    /* colors */
-    --dark-purple: #4800e0;
-    --lightest-purple: #8b54ff;
-    --light-purple: #9747ff;
-    --black: #000000;
-    --trans-purple: rgba(72, 0, 224, 0.62);
-    --trans-red: rgba(224, 0, 0, 0.62);
-    --trans-green: rgba(72, 224, 0, 0.62);
-    --light-red: #e00000;
-    --slate: #8892b0;
-    --white: #e6f1ff;
-    --lightest-slate: #ccd6f6;
-    --light-slate: #a8b2d1;
-    --dark-blue: #0f0f17;
-    --font-montserrat: "Montserrat", sans-serif;
-    --font-mont-semi: "Montserrat-semibold", sans-serif;
-    --font-playfair: "playfair_displayregular";
-    --font-play-semi: "playfair_displaysemibold";
-    --fz-mob-heading: 32px;
-    --fz-sub-heading: 15px;
-    --fz-para: 13px;
-    --border-radius: 25px;
-    --tr-ease: all 1s ease;
-    --tr-linear: all 0.5s linear;
-    --fz-xxs: 12px;
-    --fz-xs: 13px;
-    --fz-sm: 14px;
-    --fz-md: 16px;
-    --fz-lg: 18px;
-    --fz-xl: 20px;
-    --fz-xxl: 22px;
-    --fz-heading: 32px;
-    --fz-heading-max: 64px;
-    --fw-regular: 400;
-    --fw-semi-bold: 600;
-    --w1: 1000px;
-    --w2: 400px;
-    --N: 2;
-    --M: 1;
-  }
-  
-  @font-face {
-    font-family: "Monseratt";
-    src: url("./Assets/fonts/montserrat-regular-webfont.woff2") format("woff2"),
-      url("./Assets/fonts/montserrat-regular-webfont.woff"), format("woff");
-    font-weight: 400;
-  }
-  
-  @font-face {
-    font-family: "Montserrat-semibold";
-    src: url("../Assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
-      url("../Assets/fonts/montserrat-semibold-webfont.woff") format("woff");
-    font-weight: 800;
-  }
-  
-  @font-face {
-    font-family: "playfair_displayregular";
-    src: url("../Assets/fonts/playfairdisplay-regular-webfont.woff2")
-        format("woff2"),
-      url("./Assets/fonts/playfairdisplay-regular-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "playfair_displaysemibold";
-    src: url("../Assets/fonts/playfairdisplay-semibold-webfont.woff2")
-        format("woff2"),
-      url("../Assets/fonts/playfairdisplay-semibold-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+  /* colors */
+  --dark-purple: #4800e0;
+  --lightest-purple: #8b54ff;
+  --light-purple: #9747ff;
+  --black: #000000;
+  --trans-purple: rgba(72, 0, 224, 0.62);
+  --trans-red: rgba(224, 0, 0, 0.62);
+  --trans-green: rgba(72, 224, 0, 0.62);
+  --light-red: #e00000;
+  --slate: #8892b0;
+  --grey: #BAB8B8;
+  --white: #e6f1ff;
+  --lightest-slate: #ccd6f6;
+  --light-slate: #a8b2d1;
+  --dark-blue: #0f0f17;
+  --font-montserrat: "Montserrat", sans-serif;
+  --font-mont-semi: "Montserrat-semibold", sans-serif;
+  --font-playfair: "playfair_displayregular";
+  --font-play-semi: "playfair_displaysemibold";
+  --fz-mob-heading: 32px;
+  --fz-sub-heading: 15px;
+  --fz-para: 13px;
+  --border-radius: 25px;
+  --tr-ease: all 1s ease;
+  --tr-linear: all 0.5s linear;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+  --fz-heading-max: 64px;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --w1: 1000px;
+  --w2: 400px;
+  --N: 2;
+  --M: 1;
+}
 
-  .header {
-    position: fixed;
-    top:0;
-    width: 100vw;
-    padding: 10px;
-    background-color: var(--dark-purple);
+@font-face {
+  font-family: "Monseratt";
+  src: url("./Assets/fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("./Assets/fonts/montserrat-regular-webfont.woff"), format("woff");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat-semibold";
+  src: url("../Assets/fonts/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("../Assets/fonts/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "playfair_displayregular";
+  src: url("../Assets/fonts/playfairdisplay-regular-webfont.woff2")
+      format("woff2"),
+    url("./Assets/fonts/playfairdisplay-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "playfair_displaysemibold";
+  src: url("../Assets/fonts/playfairdisplay-semibold-webfont.woff2")
+      format("woff2"),
+    url("../Assets/fonts/playfairdisplay-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  padding: 10px;
+  background-color: var(--dark-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-btn {
+  position: fixed;
+  background-color: var(--trans-red);
+  border: 1px solid var(--white);
+  padding: 8px 25px;
+  border-radius: var(--border-radius);
+  right: 50px;
+  font-size: var(--fz-sm);
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--font-montserrat);
+}
+
+.preview-btn:hover {
+  background-color: var(--light-red);
+  color: var(--white);
+}
+
+.links {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.resume-wrapper {
+  background-color: var(--white);
+  /* width: 100vw; */
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.resume {
+  margin: 80px;
+  color: var(--black);
+  width: 210mm;
+  height: 297mm;
+  background-color: var(--white);
+  border: 1px solid var(--black);
+}
+
+.banner {
+  height: 250px;
+  background: url("../Assets/moon4.jpg") no-repeat;
+  background-position: center top -100px;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+.banner h1 {
+  font-family: var(--font-mont-semi);
+  font-size: var(--fz-heading-max);
+}
+
+.content{
+  height: calc(297mm - 250px);
+}
+
+/* Aside section  */
+.aside {
+  width: 30%;
+  height: 100%;
+  background-color: var(--grey);
+}
+
+.profile-part{
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-deco {
+    width: 165px;
+    height: 165px;
+    border-radius: 50%;
+    border: 3px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-  }
+}
 
-  .preview-btn{
-    position: fixed;
-    background-color: var(--trans-red);
-    border: 1px solid var(--white);
-    padding: 8px 25px;
-    border-radius: var(--border-radius);
-    right: 50px;
-    font-size: var(--fz-sm);
-    color: var(--white);
-    text-decoration: none;
-    font-family: var(--font-montserrat);
- }
- 
- .preview-btn:hover{
-   background-color: var(--light-red);
-   color:var(--white)
- }
-
- .links{
-    text-decoration: none;
-    color:var(--white);
- }
-
- .resume-wrapper{
-    background-color: var(--white);
-    /* width: 100vw; */
-    height: auto;
-    display: flex;
-    justify-content: center;
- }
-
- .resume{
-    margin: 80px;
-    color:var(--black);
-    width: 210mm;
-    height: 297mm;
-    background-color: var(--white);
-    border: 1px solid var(--black);
- }
-
- .banner{
-    height: 250px;
-    background: url("../Assets/moon4.jpg") no-repeat;
-    background-position: center top -100px;
-    background-size: cover;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--white);
- }
-
- .banner h1{
-    font-family: var(--font-mont-semi);
-    font-size: var(--fz-heading-max);
- }
-
- 
+.profile-pic {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 1px solid var(--black);
+}
