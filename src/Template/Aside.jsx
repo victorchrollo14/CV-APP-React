@@ -1,9 +1,13 @@
-import profilePic from "../Assets/usopp.jpg";
-
 import { PersonalInfo } from "./PersonalInfo";
 import { SkillsInfo } from "./SkillsInfo";
 
+import { useContext } from "react";
+import { UserContext } from "../App";
+
 export function Aside() {
+  const userInfo = useContext(UserContext);
+  const { profilePic } = userInfo;
+
   return (
     <>
       <section className="aside">

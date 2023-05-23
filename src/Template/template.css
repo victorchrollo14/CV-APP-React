@@ -128,7 +128,7 @@
 
 .banner {
   height: 250px;
-  background: url("../Assets/moon4.jpg") no-repeat;
+  /* background: url("../Assets/moon4.jpg") no-repeat; */
   background-position: center top -100px;
   background-size: cover;
   display: flex;
