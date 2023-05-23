@@ -11,6 +11,7 @@
   --light-red: #e00000;
   --slate: #8892b0;
   --grey: #BAB8B8;
+  --light-grey: #E6E6E6;
   --white: #e6f1ff;
   --lightest-slate: #ccd6f6;
   --light-slate: #a8b2d1;
@@ -144,6 +145,8 @@
 
 .content{
   height: calc(297mm - 250px);
+  display:flex;
+  flex-direction: row;
 }
 
 /* Aside section  */
@@ -188,9 +191,15 @@
   margin: 0 0 30px 0;
 }
 
+.personal-info{
+  margin: 30px 0;
+}
+
 .heading{
   font-family: var(--font-montserrat);
-  font-size: var(--fz-xxl);
+  font-size: var(--fz-xl);
+  text-transform: uppercase;
+
 }
 
 .heading-underlined{
@@ -202,16 +211,18 @@
 }
 
 .sub-heading{
+  margin: 0 0 0 10px;
   color: var(--white);
   font-family: var(--font-montserrat);
   font-size: var(--fz-sub-heading);
 }
 
 .info-values{
-  color: var(--lightest-slate);
+  color: var(--white);
   font-size: var(--fz-xs);
   font-family: var(--font-montserrat);
-  margin: 0 0 10px 0;
+  font-weight: 200;
+  margin: 0 0 10px 10px;
 }
 
 .list{
@@ -221,4 +232,77 @@
 .list li{
   margin: 0 0 0 10px;
   color: var(--white);
+  font-family: var(--font-play-semi);
 }
+
+/* Main content */
+.main-content{
+  width: 70%;
+  background-color: var(--light-grey);
+}
+
+.profile-section, .main-sections{
+  padding: 20px;
+}
+
+.main-child{
+   padding: 15px;
+   font-family: var(--font-playfair);
+   color: var(--black);
+   letter-spacing: .2px;
+   text-align:justify;
+}
+
+.main-heading{
+  font-weight:600;
+  letter-spacing: 1px;
+}
+
+.main-heading::after {
+  content: "";
+  display: inline-block;
+  margin: 0 0 0 20px;
+  width: 80px;
+  height: 2px;
+  background-color: var(--light-brown);
+  vertical-align: middle;
+}
+
+.work-exp, .edu-school{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-content li{
+  margin: 0;
+}
+
+.work-list, .edu-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.work-year, .school-year{
+  color: rgb(66, 66, 66);
+  font-weight: 100;
+  font-size: var(--fz-xs);
+}
+
+.work-position, .degree-name{
+   font-family: var(--font-montserrat);
+   font-weight: 500;
+   color:var(--black);
+   font-size: var(--fz-md);
+   text-transform: uppercase;
+   letter-spacing: .3px;
+}
+
+.company-city-name, .university-name{
+  color: var(--black);
+  font-size: var(--fz-para);
+  font-weight: 100;
+  word-spacing: 2px;
+  margin: 2px 0 0 0;
+}
+
