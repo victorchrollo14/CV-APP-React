@@ -51,12 +51,11 @@ export function PersonalSection() {
         placeholder="Description"
         cols="30"
         rows="10"
-      >
-        {description}
-      </textarea>
+        value={description}
+      ></textarea>
       <div className="upload-section">
-        <ImageUpload  >Upload Profile Pic</ImageUpload>
-        <ImageUpload >Upload Banner</ImageUpload>
+        <ImageUpload>Upload Profile Pic</ImageUpload>
+        <ImageUpload>Upload Banner</ImageUpload>
       </div>
     </section>
   );

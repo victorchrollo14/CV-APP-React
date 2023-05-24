@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Input({ children, name, onChange}) {
+export function Input({ children, name, onChange, read}) {
 
   return (
     <>
@@ -12,6 +12,7 @@ export function Input({ children, name, onChange}) {
         onChange={onChange}
         placeholder={children}
         accept="image/*"
+        readOnly={read? true: false}
       />
     </>
   );
