@@ -15,7 +15,7 @@ const initialUserInfo = {
 const initEduList = [
   {
     id: crypto.randomUUID(),
-    degree: "Degree Name",
+    degree: "Degree ",
     from: "20xx",
     to: "20xx",
     subject: "Subject",
@@ -28,12 +28,15 @@ const initWorkList = [
     id: crypto.randomUUID(),
     company: "Company Name",
     city: "City Name",
-    from: "20XX",
-    to: "20XX",
+    from: "20xx",
+    to: "20xx",
     role: "POSITION/ROLE",
   },
 ];
 
-const initSkills = [];
+const initSkills = [{
+  id: crypto.randomUUID(),
+  name: "No Skills Added",
+}];
 
 export { initialUserInfo, initEduList, initWorkList, initSkills };
