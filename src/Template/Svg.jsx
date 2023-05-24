@@ -62,7 +62,7 @@ export const WrapperDesign = () => {
         fill="white"
         className="profession"
       >
-        {profession}
+        {profession? profession: "profession"}
       </text>
     </svg>
   );

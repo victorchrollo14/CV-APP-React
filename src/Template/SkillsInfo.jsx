@@ -9,9 +9,9 @@ export function SkillsInfo() {
     <div className="skills-info info-sections">
       <HeadingUnderLined>Skills</HeadingUnderLined>
       <ul className="list">
-        {skillList.map(({ name, id }) => {
+        {skillList.length > 0? skillList.map(({ name, id }) => {
           return <li key={id}>{name}</li>;
-        })}
+        }): <li>no skill</li> }
       </ul>
     </div>
   );

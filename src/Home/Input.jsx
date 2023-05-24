@@ -1,11 +1,6 @@
 import { useState } from "react";
 
-export function Input({ children }) {
-  const [value, setValue] = useState("");
-
-  function handleChange(e) {
-    setValue(e.target.value);
-  }
+export function Input({ children, name, onChange}) {
 
   return (
     <>
@@ -13,8 +8,8 @@ export function Input({ children }) {
         type="text"
         name={children}
         className="input-button"
-        value={value}
-        onChange={handleChange}
+        value={name}
+        onChange={onChange}
         placeholder={children}
         accept="image/*"
       />

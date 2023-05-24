@@ -8,7 +8,7 @@ export function Banner() {
 
   return (
     <div className="banner" style={{ backgroundImage: `url(${bannerPic})` }}>
-      <h1>{fullName}</h1>
+      <h1>{fullName? fullName: "Kimi No Na wa"}</h1>
       <WrapperDesign />
     </div>
   );
