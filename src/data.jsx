@@ -34,9 +34,6 @@ const initWorkList = [
   },
 ];
 
-const initSkills = [{
-  id: crypto.randomUUID(),
-  name: "No Skills Added",
-}];
+const initSkills = [];
 
 export { initialUserInfo, initEduList, initWorkList, initSkills };

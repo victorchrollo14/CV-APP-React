@@ -1,49 +1,56 @@
-import { AddButton, Button, DeleteButton } from "./Button";
+import { SkillContext } from "../App";
 import { Heading } from "./Heading";
-import { Input } from "./Input";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 export function SkillsSection() {
-  const [skillinput, setskillInput] = useState([]);
   const [newInput, setNewInput] = useState("");
+  const { skillList, setSkillList } = useContext(SkillContext);
 
   const addInput = () => {
-    if (newInput.trim() !== "") {
-      setskillInput([...skillinput, newInput]);
+    if (newInput !== "") {
+      setSkillList([...skillList, { id: crypto.randomUUID(), name: newInput }]);
       setNewInput("");
     }
   };
-  const deleteInput = (index) => {
-    const updatedInput = skillinput.filter((_, i) => i !== index);
-    setskillInput(updatedInput);
+
+  const deleteInput = (id) => {
+    setSkillList((currentlist) =>
+      currentlist.filter((skill) => {
+        if (skill.id !== id) {
+          return skill;
+        }
+      })
+    );
   };
+
   return (
     <section className="form-sections edu-section">
       <Heading>Skills</Heading>
 
       <div>
         <input
+          placeholder="Enter a new skill"
           type="text"
           className="input-button margin"
           value={newInput}
           onChange={(e) => setNewInput(e.target.value)}
-          placeholder="Enter a new skill"
         />
         <button className={"btn add-btn"} onClick={addInput}>
           Add
         </button>
 
-        {skillinput.map((element, index) => (
-          <div key={index}>
+        {skillList.map((skill) => (
+          <div key={skill.id}>
             <input
               type="text"
-              value={element}
+              value={skill.name}
               className="input-button margin"
               style={{ color: "white" }}
+              readOnly
             />
             <button
               className={"btn del-btn"}
-              onClick={() => deleteInput(index)}
+              onClick={() => deleteInput(skill.id)}
             >
               Delete
             </button>
