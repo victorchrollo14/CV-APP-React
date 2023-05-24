@@ -16,10 +16,10 @@ function App() {
   const [skillList, setSkillList] = useState(initSkills);
 
   return (
-    <UserContext.Provider value={userInfo}>
-      <EduContext.Provider value={eduList}>
-        <WorkContext.Provider value={workList}>
-          <SkillContext.Provider value={skillList}>
+    <UserContext.Provider value={{ userInfo, setUserInfo }}>
+      <EduContext.Provider value={{ eduList, setEduList }}>
+        <WorkContext.Provider value={{ workList, setworkList }}>
+          <SkillContext.Provider value={{skillList, setSkillList}}>
             <BrowserRouter>
               <Routes>
                 <Route path="/" element={<Home />} />

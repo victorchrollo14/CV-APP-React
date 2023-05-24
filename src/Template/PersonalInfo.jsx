@@ -3,7 +3,7 @@ import { HeadingUnderLined } from "./Heading";
 import { useContext, useState } from "react";
 
 export function PersonalInfo() {
-  const userInfo = useContext(UserContext);
+  const { userInfo } = useContext(UserContext);
   const { phone, email } = userInfo;
 
   return (

@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { EduContext } from "../App";
 
 export function EduSection() {
-  const eduList = useContext(EduContext);
+  const { eduList } = useContext(EduContext);
 
   return (
     <div className="edu-section main-sections">

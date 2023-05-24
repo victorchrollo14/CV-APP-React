@@ -3,7 +3,7 @@ import { HeadingUnderLined } from "./Heading";
 import { SkillContext } from "../App";
 
 export function SkillsInfo() {
-  const skillList = useContext(SkillContext);
+  const { skillList } = useContext(SkillContext);
 
   return (
     <div className="skills-info info-sections">

@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { UserContext } from "../App";
 
 export function Aside() {
-  const userInfo = useContext(UserContext);
+  const { userInfo } = useContext(UserContext);
   const { profilePic } = userInfo;
 
   return (

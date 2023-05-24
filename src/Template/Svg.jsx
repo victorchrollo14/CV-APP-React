@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UserContext } from "../App";
 
 export const WrapperDesign = () => {
-  const userInfo = useContext(UserContext);
+  const { userInfo } = useContext(UserContext);
   const { profession } = userInfo;
   return (
     <svg

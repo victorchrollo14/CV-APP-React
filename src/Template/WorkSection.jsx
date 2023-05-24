@@ -3,7 +3,7 @@ import { MainHeading } from "./Heading";
 import { WorkContext } from "../App";
 
 export function WorkSection() {
-  const workList = useContext(WorkContext);
+  const { workList } = useContext(WorkContext);
 
   return (
     <div className="work-section main-sections">
