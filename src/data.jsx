@@ -13,25 +13,25 @@ const initialUserInfo = {
 };
 
 const initEduList = [
-  {
-    id: crypto.randomUUID(),
-    degree: "Degree ",
-    from: "20xx",
-    to: "20xx",
-    subject: "Subject",
-    university: "University/School Name",
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   degree: "Degree ",
+  //   from: "20xx",
+  //   to: "20xx",
+  //   subject: "Subject",
+  //   university: "University/School Name",
+  // },
 ];
 
 const initWorkList = [
-  {
-    id: crypto.randomUUID(),
-    company: "Company Name",
-    city: "City Name",
-    from: "20xx",
-    to: "20xx",
-    role: "POSITION/ROLE",
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   company: "Company Name",
+  //   city: "City Name",
+  //   from: "20xx",
+  //   to: "20xx",
+  //   role: "POSITION/ROLE",
+  // },
 ];
 
 const initSkills = [];
