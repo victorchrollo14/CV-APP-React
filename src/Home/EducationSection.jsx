@@ -1,16 +1,9 @@
 import { EduContext } from "../App";
-import { AddButton, DeleteButton } from "./Button";
+import { DeleteButton } from "./Button";
 import { Heading } from "./Heading";
+import { InitEduForm } from "./InitEduForm";
 import { Input } from "./Input";
 import { useContext, useState } from "react";
-
-let initialObj = {
-  degree: "",
-  from: "",
-  to: "",
-  subject: "",
-  university: "",
-};
 
 export function EduSection() {
   return (
@@ -23,52 +16,15 @@ export function EduSection() {
 
 function EduList() {
   const { eduList, setEduList } = useContext(EduContext);
-  const [tempObj, setTempObj] = useState(initialObj);
 
-  const handleDegChange = (e) => {
-    setTempObj({ ...tempObj, degree: e.target.value });
+  const delItem = (id) => {
+    setEduList((currentlist) => currentlist.filter((ed) => ed.id !== id));
   };
-
-  const handleFromChange = (e) => {
-    setTempObj({ ...tempObj, from: e.target.value });
-  };
-
-  const handleToChange = (e) => {
-    setTempObj({ ...tempObj, to: e.target.value });
-  };
-
-  const handleSubChange = (e) => {
-    setTempObj({ ...tempObj, subject: e.target.value });
-  };
-
-  const handleUniChange = (e) => {
-    setTempObj({ ...tempObj, university: e.target.value });
-  };
-
-  const addItem = () => {
-    const { degree, from, to, subject, university } = tempObj;
-    setEduList([
-      ...eduList,
-      {
-        id: crypto.randomUUID(),
-        degree: degree,
-        from: from,
-        to: to,
-        subject: subject,
-        university: university,
-      },
-    ]);
-    setTempObj(initialObj);
-  };
-
-  const delItem = (e, id) => {
-      setEduList((currentlist) => currentlist.filter(ed => ed.id !== id))
-  }
 
   const list = eduList.map(({ id, degree, from, to, subject, university }) => {
     if (eduList) {
       return (
-        <li key={id} >
+        <li key={id}>
           <Input name={degree} read={true}>
             Degree{" "}
           </Input>
@@ -87,7 +43,7 @@ function EduList() {
             University/School Name
           </Input>
           <div className="same-row">
-            <DeleteButton onClick={(e) => delItem(e, id)} />
+            <DeleteButton onClick={() => delItem(id)} />
           </div>
         </li>
       );
@@ -97,26 +53,7 @@ function EduList() {
 
   return (
     <ul className="list gap-btw">
-      <li>
-        <Input name={tempObj.degree} onChange={handleDegChange}>
-          Degree
-        </Input>
-        <div className="same-row">
-          <Input name={tempObj.from} onChange={handleFromChange}>
-            From
-          </Input>
-          <Input name={tempObj.to} onChange={handleToChange}>
-            To
-          </Input>
-        </div>
-        <Input name={tempObj.subject} onChange={handleSubChange}>
-          Subject Name
-        </Input>
-        <Input name={tempObj.university} onChange={handleUniChange}>
-          University/School Name
-        </Input>
-        <AddButton onClick={addItem} />
-      </li>
+      <InitEduForm />
       {list}
     </ul>
   );

@@ -4,6 +4,7 @@ import Home from "./Home/Home";
 import Template from "./Template/Template";
 import { initialUserInfo, initEduList, initWorkList, initSkills } from "./data";
 
+
 export const UserContext = createContext();
 export const EduContext = createContext();
 export const WorkContext = createContext();
