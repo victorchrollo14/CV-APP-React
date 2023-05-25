@@ -230,7 +230,7 @@
 }
 
 .list li{
-  margin: 0 0 0 10px;
+  margin: 0 0 10px 10px;
   color: var(--white);
   font-family: var(--font-play-semi);
 }

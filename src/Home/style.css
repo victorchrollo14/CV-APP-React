@@ -296,3 +296,9 @@ input[type="file"]::file-selector-button {
 .margin{
   margin: 0 10px 10px 0;
 }
+
+.gap-btw{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

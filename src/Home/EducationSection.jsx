@@ -68,7 +68,7 @@ function EduList() {
   const list = eduList.map(({ id, degree, from, to, subject, university }) => {
     if (eduList) {
       return (
-        <li key={id}>
+        <li key={id} >
           <Input name={degree} read={true}>
             Degree{" "}
           </Input>
@@ -96,7 +96,7 @@ function EduList() {
   });
 
   return (
-    <ul className="list">
+    <ul className="list gap-btw">
       <li>
         <Input name={tempObj.degree} onChange={handleDegChange}>
           Degree

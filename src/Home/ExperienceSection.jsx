@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import { AddButton, DeleteButton } from "./Button";
 import { Heading } from "./Heading";
 import { Input } from "./Input";
+import { InitExpForm } from "./InitExpForm";
+import { WorkContext } from "../App";
 
 export function ExpSection() {
   return (
@@ -13,46 +15,31 @@ export function ExpSection() {
 }
 
 function ExpList() {
-  const initial = [{uid: crypto.randomUUID(), isShown: false}]
-  const [inputarray, setInputArray] = useState(initial)
-  
+  const { workList, setWorkList } = useContext(WorkContext);
 
-  const addItem = () => {
-      setInputArray([{uid: crypto.randomUUID(), isShown: true}, ...inputarray])
-  }
+  const delItem = (id) => {
+    setWorkList((currentlist) => currentlist.filter((work) => work.id !== id));
+  };
 
-  const delItem = (e, uid) => {
-      setInputArray((currentarray) => currentarray.filter(item => {
-            if (item.uid !== uid) {
-                return item;
-            }
-      }))
-  }
-
-
-  const itemsList = inputarray.map(input => {
+  const itemsList = workList.map(({ id, company, from, to, city, role }) => {
     return (
-       <li key={input.uid}>
-        <Input>Company </Input>
+      <li key={id}>
+        <Input name={company}>Company </Input>
         <div className="same-row">
-          <Input>From</Input>
-          <Input>to</Input>
+          <Input name={from}>From</Input>
+          <Input name={to}> to</Input>
         </div>
-        <Input>City </Input>
-        <Input>Role</Input>
-        <div className="same-row1">
-          {input.isShown? <DeleteButton onClick={e => delItem(e, input.uid)}/>: null}
-          {input.isShown? null: <AddButton  onClick={addItem}/>}
-        </div>
+        <Input name={city}>City </Input>
+        <Input name={role}>Role</Input>
+        <DeleteButton onClick={() => delItem(id)} />
       </li>
-    )
-  })
-  
+    );
+  });
+
   return (
     <ul className="list">
-       {itemsList}
+      <InitExpForm />
+      {itemsList}
     </ul>
   );
 }
-
-

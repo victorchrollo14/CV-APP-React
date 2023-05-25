@@ -12,13 +12,13 @@ export const SkillContext = createContext();
 function App() {
   const [userInfo, setUserInfo] = useState(initialUserInfo);
   const [eduList, setEduList] = useState(initEduList);
-  const [workList, setworkList] = useState(initWorkList);
+  const [workList, setWorkList] = useState(initWorkList);
   const [skillList, setSkillList] = useState(initSkills);
 
   return (
     <UserContext.Provider value={{ userInfo, setUserInfo }}>
       <EduContext.Provider value={{ eduList, setEduList }}>
-        <WorkContext.Provider value={{ workList, setworkList }}>
+        <WorkContext.Provider value={{ workList, setWorkList }}>
           <SkillContext.Provider value={{skillList, setSkillList}}>
             <BrowserRouter>
               <Routes>

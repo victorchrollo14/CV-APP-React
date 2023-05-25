@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Input({ children, name, onChange, read}) {
+export function Input({ children, name, onChange, read=false}) {
 
   return (
     <>
