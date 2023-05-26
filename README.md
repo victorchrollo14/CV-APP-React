@@ -11,7 +11,9 @@ Current Progress
 
 
 
-https://github.com/victorchrollo14/CV-APP-React/assets/89346667/648413c2-fc9c-44f9-8599-71bed4e92765
+
+https://github.com/victorchrollo14/CV-APP-React/assets/89346667/6079f3e4-e558-40ac-8d59-f70cf10ac0cb
+
 
 
 
