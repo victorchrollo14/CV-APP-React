@@ -23,7 +23,7 @@ export function MainButtons() {
         const pdfHeight = pdf.internal.pageSize.getHeight();
 
         pdf.addImage(imgData, "JPEG", 0, 0, pdfWidth, pdfHeight);
-        fullName ? pdf.save(`{${fullName}.pdf}`) : pdf.save("resume.pdf");
+        fullName ? pdf.save(`${fullName}.pdf}`) : pdf.save("resume.pdf");
       };
     });
   };
