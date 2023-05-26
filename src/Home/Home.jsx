@@ -2,6 +2,7 @@ import "./style.css"
 
 import { Header } from './Header'
 import { Form } from './Form'
+import { DownLoadResume } from "../Template/Resume"
 
 function Home() {
 
@@ -9,6 +10,7 @@ function Home() {
     <>
       <Header />
       <Form />
+      <DownLoadResume />
     </>
   )
 }

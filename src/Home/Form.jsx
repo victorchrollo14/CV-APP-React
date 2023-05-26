@@ -15,7 +15,7 @@ export function Form() {
 
   return (
     <>
-      <div className="main-body">
+      <div className="main-body" id="Main">
         <form action="" className="form" onSubmit={handleSubmit}>
           <PersonalSection />
           <EduSection />

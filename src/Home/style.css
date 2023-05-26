@@ -71,6 +71,10 @@
   font-style: normal;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -302,3 +306,32 @@ input[type="file"]::file-selector-button {
   flex-direction: column;
   gap: 20px;
 }
+
+.wrapper{
+  width:100vw;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-to-top{
+  text-decoration: none;
+  font-size: var(--fz-sm);
+  font-family: var(--font-montserrat);
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  background: var(--dark-purple);
+  color:var(--white);
+  border: 1px solid var(--white);
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+}
+
+.back-to-top:hover{
+  background: var(--light-purple);
+}
+
+
+
