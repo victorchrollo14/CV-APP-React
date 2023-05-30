@@ -1,5 +1,6 @@
-export function ImageUpload({children}){
+export function ImageUpload({children, onChange}){
     return(
+
         <label htmlFor="uploading image">
             {children}
               <input
@@ -8,6 +9,7 @@ export function ImageUpload({children}){
                 className="upload-file"
                 id="profilepic"
                 accept=".png, .jpg, .jpeg"
+                onChange={onChange}
               />
         </label>
     )

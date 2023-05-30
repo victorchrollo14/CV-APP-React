@@ -6,7 +6,8 @@ import { UserContext } from "../App";
 
 export function PersonalSection() {
   const { userInfo, setUserInfo } = useContext(UserContext);
-  const { fullName, profession, phone, email, description } = userInfo;
+  const { fullName, profession, phone, email, description } =
+    userInfo;
 
   const handleNameChange = (e) => {
     setUserInfo({ ...userInfo, fullName: e.target.value });
@@ -26,6 +27,35 @@ export function PersonalSection() {
 
   const handleDes = (e) => {
     setUserInfo({ ...userInfo, description: e.target.value });
+  };
+
+  const handleProfileUpload = (e) => {
+    let file = e.target.files[0];
+
+    const reader = new FileReader();
+
+    if (file) {
+      reader.readAsDataURL(file);
+
+      reader.onload = () => {
+        const imageurl = reader.result;
+        setUserInfo({ ...userInfo, profilePic: imageurl });
+      };
+    }
+  };
+
+  const handleBannerUpload = (e) => {
+    let banner = e.target.files[0];
+    const reader = new FileReader();
+
+    if (banner) {
+      reader.readAsDataURL(banner);
+
+      reader.onload = () => {
+        const banUrl = reader.result;
+        setUserInfo({ ...userInfo, bannerPic: banUrl });
+      };
+    }
   };
 
   return (
@@ -54,8 +84,10 @@ export function PersonalSection() {
         value={description}
       ></textarea>
       <div className="upload-section">
-        <ImageUpload>Upload Profile Pic</ImageUpload>
-        <ImageUpload>Upload Banner</ImageUpload>
+        <ImageUpload onChange={handleProfileUpload}>
+          Upload Profile Pic
+        </ImageUpload>
+        <ImageUpload onChange={handleBannerUpload}>Upload Banner</ImageUpload>
       </div>
     </section>
   );
