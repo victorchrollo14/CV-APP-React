@@ -32,7 +32,7 @@ export function PersonalSection() {
     <section className="Info-section form-sections">
       <Heading>Personal Information</Heading>
       <Input name={fullName} onChange={handleNameChange}>
-        Full Name
+        fullname
       </Input>
       <Input name={profession} onChange={handleProfChange}>
         Profession
